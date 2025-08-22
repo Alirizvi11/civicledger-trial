@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivicLedger Voting App</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/@aptos-labs/aptos-api/dist/index.global.js"></script>
+</head>
+<body>
+  <h1>🗳️ CivicLedger Voting App</h1>
+
+  <!-- Connect Wallet -->
+  <section>
+    <button id="connectBtn">🔗 Connect Wallet</button>
+    <p id="walletAddress">Not connected</p>
+  </section>
+
+  <!-- Claim Badge -->
+  <section>
+    <h3>🏅 Claim Your Badge</h3>
+    <button id="badgeBtn">Claim Badge</button>
+  </section>
+
+  <!-- Submit Proposal -->
+  <section>
+    <h3>📤 Submit Proposal</h3>
+    <input type="text" id="proposalTitle" placeholder="Proposal title"/>
+    <button id="submitProposalBtn">Submit Proposal</button>
+  </section>
+
+  <!-- Cast Your Vote -->
+  <section>
+    <h3>🗳️ Cast Your Vote</h3>
+    <input type="text" id="voteOwner" placeholder="Proposal owner address"/>
+    <input type="number" id="voteId" placeholder="Proposal ID"/>
+    <select id="voteChoice">
+      <option value="true">✅ Yes</option>
+      <option value="false">❌ No</option>
+    </select>
+    <button id="voteBtn">Submit Vote</button>
+  </section>
+
+  <!-- Live Proposals -->
+  <section>
+    <h3>📋 Live Proposals</h3>
+    <input type="text" id="listOwner" placeholder="Proposal owner address"/>
+    <button id="loadProposalsBtn">Load Proposals</button>
+    <div id="proposalList"></div>
+  </section>
+
+  <script src="./app.js"></script>
+
+
+
+</body>
+</html>
